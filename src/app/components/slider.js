@@ -6,7 +6,6 @@ const ContainerSlide = styled.section`
 
 background-color: var(--heading-color);
 height: 120vh;
-margin-bottom: 200px;
 
 `
 

@@ -199,7 +199,7 @@ export default function Header(){
                     </li>
                     
                     <li>
-                    <Link href="/">Contato</Link>
+                    <Link href="/contato">Contato</Link>
                     </li>
                 </MenuList>
             </nav>

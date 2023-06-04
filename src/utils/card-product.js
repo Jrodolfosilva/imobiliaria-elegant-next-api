@@ -5,13 +5,17 @@ const ContainerCard = styled.div`
 
 display: block;
 background-color: #fff;
-max-height: 400px;
+max-height: 420px;
 width: 376px;
 border-radius: 12px;
 box-shadow:0px 1px 4px rgba(24, 26, 32, 0.07);
 word-wrap: break-word;
+margin: 0 10px;
 
-
+@media (max-width:768px) {
+    width: 287px;
+    margin: 0px 05px !important;
+}
 
 `
 

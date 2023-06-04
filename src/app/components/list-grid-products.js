@@ -1,5 +1,5 @@
-
 import CardProduct from "@/utils/card-product"
+import Carousel from "@/utils/carousel"
 import styled from "styled-components"
 
 
@@ -31,7 +31,7 @@ section{
 }
 
 
-@media (max-width:678px) {
+@media (max-width:768px) {
     
     padding: 30px 12px;
 }
@@ -40,8 +40,6 @@ section{
 
 const ContainerList = styled.section`
 
-display: flex;
-justify-content: space-between;
 
 
 `
@@ -56,10 +54,15 @@ const ContainerButtom =  styled.button`
     background-color: transparent;
     cursor: pointer;
 
+    img{
+        width: 20px;
+        transform: rotate(300deg);
+    }
+
 `
 
 
-async function ListGridProducts({title,description,value}){
+async function ListGridProducts(){
 
     const key =""
     const url ="https://jsonplaceholder.typicode.com/todos/1"
@@ -68,10 +71,6 @@ async function ListGridProducts({title,description,value}){
    const response = await fetch(url);
    const responseData = await response.json().catch((error)=>console.log(error))
    
-
-
-
-
 
 
     return(
@@ -83,15 +82,12 @@ async function ListGridProducts({title,description,value}){
                 </div>
                 <div>
                     <ContainerButtom>
-                        Todos os Imóveis ""
+                        Todos os Imóveis
+                        <img src="/arrow.svg" alt=""/>
                     </ContainerButtom>
                 </div>
             </section>
-            <ContainerList>
-                <CardProduct/>
-                <CardProduct/>
-                <CardProduct/>
-            </ContainerList>
+            <Carousel/>
 
         </ContainerGrid>
     )

@@ -19,7 +19,7 @@ position: relative;
 `
 const Containermap = styled.div`
 
-height: 80vh; 
+height: 90vh; 
 
 
 @media (max-width:768px) {
@@ -74,6 +74,7 @@ const ContainerForm = styled.div`
 
         label{
             display: block;
+            margin: 12px 0px;
 
             h3{
                 font-family: inherit;
@@ -176,7 +177,7 @@ const handleValue = ()=>{
                             </label>
                             <label>
                                 <h3>Mensagem</h3>
-                            <textarea id="mensagem" name="mensagem" rows="8" cols="33" placeholder="Escreva aqui sua mensagem"></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="10" cols="33" placeholder="Escreva aqui sua mensagem"></textarea>
                             </label>
                             <input type="submit" value="Enviar mensagem"/>
                         </form>

@@ -118,7 +118,7 @@ const ProductFeature =  styled.div`
 `
 
 
-export default function CardProduct (imovel){
+export default function CardProduct (){
 
 
     return(

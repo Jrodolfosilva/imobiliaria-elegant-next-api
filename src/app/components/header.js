@@ -187,11 +187,11 @@ export default function Header(){
                     </li>
                     
                     <li>
-                    <Link href="">Quem somos</Link>
+                    <Link href="/about">Quem somos</Link>
                     </li>
                     
                     <li >
-                    <Link href="/">Imóveis</Link>
+                    <Link href="/search">Imóveis</Link>
                     </li>
                     
                     <li>
@@ -199,7 +199,7 @@ export default function Header(){
                     </li>
                     
                     <li>
-                    <Link href="/contato">Contato</Link>
+                    <Link href="/contact">Contato</Link>
                     </li>
                 </MenuList>
             </nav>

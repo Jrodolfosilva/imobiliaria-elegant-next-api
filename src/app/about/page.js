@@ -141,12 +141,9 @@ p{
 
 `
 
-
-
+ 
 
 export default function (){
-
-
 
     return(
         <ContainerAbout>

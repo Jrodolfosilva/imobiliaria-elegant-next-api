@@ -195,7 +195,7 @@ export default function Header(){
                     </li>
                     
                     <li>
-                    <Link href="/">Condomínio</Link>
+                    <Link href="/condominio">Condomínio</Link>
                     </li>
                     
                     <li>

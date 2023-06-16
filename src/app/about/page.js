@@ -143,7 +143,7 @@ p{
 
  
 
-export default function (){
+export default function about (){
 
     return(
         <ContainerAbout>

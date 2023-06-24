@@ -108,6 +108,10 @@ form{
             width: 100%;
             border: none;
 
+            select,input{
+                width: 100%;
+                background-color: #fff;
+            }
 
             p{
                 padding-left: 14px;

@@ -91,7 +91,7 @@ form{
 
 }
 
-@media (max-width:450px) {
+@media (max-width:760px) {
     
   
     form{
@@ -105,7 +105,7 @@ form{
         }
 
         label{
-
+            width: 100%;
             border: none;
 
 

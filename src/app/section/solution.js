@@ -27,6 +27,14 @@ p{
     font-size: 14px;
     font-weight: 300;
 }
+
+
+@media (max-width:450px) {
+    h2{
+        font-size: 17px;
+    }
+    
+}
 `
 
 const ContainerList = styled.div`
@@ -101,7 +109,17 @@ img{
 
 
  
+@media (max-width:450px) {
+    gap: 10px;
 
+    h2{
+        font-size: 17px;
+    }
+    button{
+        
+        font-size:14px;
+    }
+}
 `
 
 

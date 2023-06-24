@@ -26,6 +26,13 @@ p{
     font-weight: 300;
 }
 
+@media (max-width:450px) {
+    
+    h2{
+        font-size: 17px;
+    }
+}
+
 `
 
 const SectionList = styled.div`
@@ -67,6 +74,20 @@ div:nth-child(6){
 }
 
 
+@media (max-width:450px) {
+    
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 030px;
+
+
+div{
+    min-width: auto;
+    max-width: 100%;
+}
+
+}
 
 
 `

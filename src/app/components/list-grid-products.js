@@ -113,7 +113,7 @@ async function ListGridProducts(){
                     
                 </div>
             </section>
-            <Carousel/>
+            
 
         </ContainerGrid>
     )

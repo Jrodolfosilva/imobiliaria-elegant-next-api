@@ -1,5 +1,6 @@
 import CardProduct from "@/utils/card-product"
 import Carousel from "@/utils/carousel"
+import Link from "next/link"
 import styled from "styled-components"
 
 
@@ -10,7 +11,7 @@ padding:90px 160px;
 display: flex;
 flex-direction: column;
 gap: 60px;
-
+min-width: 100%;
 
 section{
     display: flex;
@@ -31,9 +32,25 @@ section{
 }
 
 
-@media (max-width:768px) {
+@media (max-width:450px) {
     
     padding: 30px 12px;
+
+    section{
+
+        flex-direction: column;
+        gap: 30px;
+        div{
+
+            h2{
+                font-size: 17px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+
 }
 
 `
@@ -59,6 +76,12 @@ const ContainerButtom =  styled.button`
         transform: rotate(300deg);
     }
 
+
+    @media (max-width:450px) {
+        
+        font-size: 13px;
+    }
+
 `
 
 
@@ -81,10 +104,13 @@ async function ListGridProducts(){
                     <p>Descubra nossas listas em destaque</p>
                 </div>
                 <div>
-                    <ContainerButtom>
+                <Link href="/search">
+                     <ContainerButtom>
                         Todos os Imóveis
                         <img src="/arrow.svg" alt=""/>
-                    </ContainerButtom>
+                     </ContainerButtom>
+                </Link>
+                    
                 </div>
             </section>
             <Carousel/>

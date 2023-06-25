@@ -17,7 +17,7 @@ export default function Home() {
     <Condominio/>
     <Solution/>
     <Agents/>
-    
+    <CtaHome/>
 
     
     </main>

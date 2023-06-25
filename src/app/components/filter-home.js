@@ -55,6 +55,9 @@ form{
 
         }
 
+
+      
+
     }
 
     label:first-child{
@@ -76,7 +79,8 @@ form{
         width: 200px;
 
            div{
-
+            display: flex;
+            align-items: center;
             background-color: #EB6753;
             color: #fff;
             width: 150px;
@@ -84,6 +88,17 @@ form{
             border-radius: 10px;
 
             cursor: pointer;
+
+            button{
+                    border: none;
+                    background-color: transparent;
+                    font-family:inherit;
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #fff;
+
+
+                }
            }
         
     }
@@ -116,6 +131,8 @@ form{
             p{
                 padding-left: 14px;
             }
+
+           
         }
     }
 

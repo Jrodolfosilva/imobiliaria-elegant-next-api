@@ -5,6 +5,7 @@ import Condominio from "./section/condominio";
 import Solution from "./section/solution";
 import FilterHome from "./components/filter-home";
 import Agents from "./section/agents";
+import CtaHome from "./components/call-to-action-home";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <Condominio/>
     <Solution/>
     <Agents/>
+    <CtaHome/>
 
     
     </main>

@@ -14,7 +14,7 @@ const ContainerPreloader = styled.div`
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 99999;
+    z-index:99;
 
 
 

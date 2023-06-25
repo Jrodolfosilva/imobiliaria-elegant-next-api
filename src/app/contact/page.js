@@ -7,6 +7,10 @@ const ContainerContato = styled.section`
 margin: 90px 0px;
 padding-top: 90px 160px;
 position: relative;
+background-image: url("/preloader.gif");
+background-repeat: no-repeat;
+background-position: center;
+
 
 
 @media (max-width:768px) {
@@ -43,6 +47,7 @@ const ContainerForm = styled.div`
 
     input[type="submit"]{
         background-color: #EB6753;
+        background-color: #0E2E50;
         height: 55px;
         width: 100%;
         font-family: inherit;
@@ -147,7 +152,7 @@ const handleValue = ()=>{
         <ContainerContato>
             <Containermap>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15799.993268052369!2d-34.89551885!3d-8.10165195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f6af3e51087%3A0x8dbffd8dd9f0b6e!2sPraia%20do%20Pina!5e0!3m2!1spt-BR!2sbr!4v1685915247218!5m2!1spt-BR!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27701.739462213758!2d-50.05112032466336!3d-29.78581110347093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951877cde6bcee65%3A0xd0b49f10f955aa6d!2sImobili%C3%A1ria%20Elegance%20Im%C3%B3veis.On!5e0!3m2!1spt-BR!2sbr!4v1687719443374!5m2!1spt-BR!2sbr"
                     width="100%"
                     height="100%"
                     style={{ border: '0' }}
@@ -155,8 +160,9 @@ const handleValue = ()=>{
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
+
                     <ContainerForm>
-                        <h2>Como podemos lhe ajudar?</h2>
+                        <h2>Nós Adoraríamos Ouvir De Você</h2>
                         <form onSubmit={(e)=>{
                             
                             e.preventDefault()
@@ -184,9 +190,10 @@ const handleValue = ()=>{
                     </ContainerForm>
             </Containermap>
             <ContainerContent>
-                <h2>Nós Adoraríamos Ouvir De Você.</h2>
-                <p>Estamos aqui para responder a qualquer pergunta que você possa ter. Como parceira de empresas, 
-                a realton possui mais de 9.000 escritórios de todos os tamanhos e todo o potencial de sessão</p>
+                <h2>Conte com nossa expertise</h2>
+                <p>
+                Com anos de experiência no mercado imobiliário, nossa equipe se destaca pela sua expertise e conhecimento. Se você está procurando comprar ou vender um imóvel, podemos oferecer soluções personalizadas que atendam às suas necessidades. Fale conosco hoje mesmo e permita-nos ajudá-lo a alcançar seus objetivos imobiliários.
+                </p>
             </ContainerContent>
            
         </ContainerContato>

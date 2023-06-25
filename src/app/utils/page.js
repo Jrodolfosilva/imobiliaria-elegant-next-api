@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -8,16 +9,12 @@ import styled from 'styled-components';
 
 const ContainerCarrossel = styled.div`
 
-max-width: 100%;
-
-
-
-@media (max-width:450px) {
-  max-width: 100%;
-  
-}
+padding-top: 200px;
+max-width: 100vw;
+overflow-x:hidden ;
 
 `
+
 
 export default function Responsive() {
 
@@ -58,16 +55,14 @@ export default function Responsive() {
   };
 
   return (
-    
+    <ContainerCarrossel>
       <Slider {...settings}>
-
-        <CardProduct/>
-        <CardProduct/>
         <CardProduct/>
         <CardProduct/>
         <CardProduct/>
         <CardProduct/>
       </Slider>
+      </ContainerCarrossel>
     
   );
 }

@@ -1,6 +1,6 @@
 "use client"
 
-import CardProduct from "@/utils/card-product"
+import CardProduct from "@/app/utils/card-product"
 import styled from "styled-components"
 
 const ContainerSearch = styled.section`

@@ -12,7 +12,7 @@ padding: 90px 0px;
 `
 
 const ContainerBanner = styled.div`
-height: 450px;
+height: 300px;
 padding: 90px 160px;
 background-image: url("/about.jpg");
 
@@ -39,6 +39,12 @@ gap: 100px;
 div{
     width: 50%;
 }
+
+div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 h2{
     font-family: inherit;
     font-size: 30px;
@@ -54,6 +60,32 @@ p{
 p+p{
     margin-top:30px ;
 }
+
+
+@media (max-width:760px) {
+    
+    padding: 30px 12px;
+    flex-direction: column;
+    gap: 30px;
+
+    div{
+        width: 100%;
+    }
+
+    div:first-child{
+
+        h2{
+            font-size: 17px;
+        }
+
+        p+p{
+            margin-top:0px ;
+        }  
+
+    }
+}
+
+
 `
 
 const ContainerImageAbout = styled.div`
@@ -62,6 +94,15 @@ gap: 100px;
 
 img{
     margin: 0 auto;
+}
+
+
+@media (max-width:760px) {
+    
+    padding: 30px 12px;
+    img{
+        max-width: 100%;
+    }
 }
 
 `
@@ -119,6 +160,23 @@ div:nth-child(2){
     }
 }
 
+
+@media (max-width:768px) {
+    
+    padding: 30px 12px;
+     h2{
+        font-size: 17px;
+     }
+
+
+     div:nth-child(2){
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+     }
+
+
+}
+
 /*Refatora isso aqui, tem estilo do component AgentsCard */
 
 `
@@ -148,22 +206,17 @@ export default function about (){
     return(
         <ContainerAbout>
             <ContainerBanner>
-                <h2>Sobre nós</h2>
             </ContainerBanner>
             <ContainerContent>
                 <div>
-                    <h2>missão para mudara visão do campo imobiliário.</h2>
+                    <h2>Sua parceira confiável no mercado imobiliário</h2>
                 </div>
                 <div>
-                    <p>Não importa o quão organizado você seja - 
-                        um excesso de brinquedos sempre garantirá que sua casa esteja uma 
-                        bagunça esperando para acontecer. Felizmente, fazer com que as crianças 
-                        aceitem a ideia de se livrar de suas coisas é muito mais fácil do que parece.
-                    </p>
                     <p>
-                    Maecenas quis viverra metus, et efficitur ligula. Nam congue augue et ex congue, sed luctus lectus congue.
-                     Inteiro convallis condimentum sem. 
-                    Duis elementum tortor eget condimentum tempor. Praesent sollicitudin lectus ut pharetra pulvinar.
+                    Bem-vindo à Elegance, onde excelência e dedicação se encontram para oferecer a você uma experiência imobiliária única. Nós somos especializados em ajudar nossos clientes a encontrar o lar perfeito, o investimento ideal ou a propriedade comercial adequada.
+                    </p>
+                    <p>Nossa equipe é formada por profissionais apaixonados e dedicados, que estão sempre atualizados sobre as tendências e as mudanças no setor.Aqui, oferecemos uma abordagem personalizada e individualizada, entendendo que cada cliente tem necessidades e desejos únicos. Compreendemos a importância de ouvir e entender suas expectativas, e estamos comprometidos em superar suas expectativas em todos os aspectos.
+                        
                     </p>
                 </div>
 
@@ -174,7 +227,7 @@ export default function about (){
             <ContainerAgents>
                 <div>
                     <h2>Nossos Time de Corretores</h2>
-                    <p>Aliquam lacinia diam quis lacus euismod</p>
+                    <p> Com anos de experiência e conhecimento aprofundado do mercado imobiliário, estamos preparados para atender a todas as suas necessidades.</p>
 
                 </div>
                 <div>
@@ -182,35 +235,35 @@ export default function about (){
                         <div><img src="https://creativelayers.net/themes/homez-html/images/team/agent-1.jpg" alt=""/></div>
                         <div>
                             <h3>Arlene MCCoy</h3>
-                            <p>Broker</p>
+                            <p>Corretor</p>
                         </div>
                     </AgentsCard>
                     <AgentsCard>
                     <div><img src="https://creativelayers.net/themes/homez-html/images/team/agent-2.jpg" alt=""/></div>
                         <div>
                             <h3>Arlene MCCoy</h3>
-                            <p>Broker</p>
+                            <p>Corretor</p>
                         </div>
                     </AgentsCard>
                     <AgentsCard>
                     <div><img src="https://creativelayers.net/themes/homez-html/images/team/agent-3.jpg" alt=""/></div>
                         <div>
                             <h3>Arlene MCCoy</h3>
-                            <p>Broker</p>
+                            <p>Corretor</p>
                         </div>
                     </AgentsCard>
                     <AgentsCard>
                     <div><img src="https://creativelayers.net/themes/homez-html/images/team/agent-4.jpg" alt=""/></div>
                         <div>
                             <h3>Arlene MCCoy</h3>
-                            <p>Broker</p>
+                            <p>Corretor</p>
                         </div>
                     </AgentsCard>
                     <AgentsCard>
                     <div><img src="https://creativelayers.net/themes/homez-html/images/team/agent-5.jpg" alt=""/></div>
                         <div>
                             <h3>Arlene MCCoy</h3>
-                            <p>Broker</p>
+                            <p>Corretor</p>
                         </div>
                     </AgentsCard>
                 </div>

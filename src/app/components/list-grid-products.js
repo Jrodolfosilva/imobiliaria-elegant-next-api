@@ -1,5 +1,6 @@
-import CardProduct from "@/utils/card-product"
-import Carousel from "@/utils/carousel"
+"use client"
+import CardProduct from "@/app/utils/card-product"
+import Carousel from "@/app/utils/page"
 import Link from "next/link"
 import styled from "styled-components"
 
@@ -87,11 +88,19 @@ const ContainerButtom =  styled.button`
 
 async function ListGridProducts(){
 
-    const key =""
-    const url ="https://jsonplaceholder.typicode.com/todos/1"
+    const chaveKey ="e09693ec32907a7f812265cb62f53486";
+    const quantidadePorPagina = 3;
+    let paginaAtual =1
+    let paginaTotal ;
+
+    const url =`http://elegan34-rest.vistahost.com.br/imoveis/listar?key=${chaveKey}&showtotal=1&pesquisa={"fields":["Codigo","Categoria","Bairro","Cidade","ValorVenda","ValorLocacao","Dormitorios","Suites","Vagas","AreaTotal","AreaPrivativa","Caracteristicas","InfraEstrutura"],"order":{"Bairro":"asc"},"paginacao":{"pagina":1,"quantidade":${quantidadePorPagina}}}`;
 
 
-   const response = await fetch(url);
+   const response = await fetch(url,{
+    headers:{
+        "Accept":"application/json"
+    }
+   });
    const responseData = await response.json().catch((error)=>console.log(error))
    
 
@@ -110,9 +119,15 @@ async function ListGridProducts(){
                         <img src="/arrow.svg" alt=""/>
                      </ContainerButtom>
                 </Link>
-                    
+                   
                 </div>
             </section>
+                <div style={{display:"flex"}}>
+                   {console.log(responseData)
+                    
+                   }
+                       
+                    </div>
             
 
         </ContainerGrid>

@@ -98,8 +98,8 @@ export default function Condominio (){
     return(
         <ContainerSectionCondominio>
             <SectionContent>
-                <h2>Explorar tipos de Condomínio</h2>
-                <p>Obtenha algumas inspirações de mais de 1800 habilidades</p>
+                <h2>Bairros Selecionados</h2>
+                <p>Nesta seção, você encontrará uma lista de imóveis disponíveis nos seguintes bairros</p>
             </SectionContent>
             <SectionList>
                 <div>

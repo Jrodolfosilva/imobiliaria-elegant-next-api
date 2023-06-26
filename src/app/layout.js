@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+
 import Footer from './components/footer'
 import Header from './components/header'
 import Preloader from './components/preloader'
@@ -16,13 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
  
 
-
-
   return (
     <html lang="pt-br">
       <body className={poppins.className}>
-  
-
+        
         <Header/>
         {children}
         <Footer/>

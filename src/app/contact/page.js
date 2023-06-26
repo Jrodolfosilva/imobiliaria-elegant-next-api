@@ -27,7 +27,7 @@ height: 90vh;
 
 
 @media (max-width:768px) {
-    height: 40vh;
+    height: auto;
 }
 
 `

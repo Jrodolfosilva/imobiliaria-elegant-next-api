@@ -45,7 +45,7 @@ li{
     &::after{
         content: "";
         position: absolute;
-        background-color: #000;
+        background-color: #0C378A;
         bottom: 0;
         left: 0;
         height: 2px;
@@ -178,7 +178,9 @@ export default function Header(){
 
     return(
         <ContainerHeader>
-            <img src={""} alt={'LOGOMARCA'}/>
+            <Link href="/">
+             <img src="logo-azul.svg" alt={'LOGOMARCA'}/>
+            </Link>
             <nav>
                 <MenuList>
                    
@@ -218,10 +220,18 @@ export default function Header(){
                                 </div>
                                 <nav>
                                     <ul>
-                                    <li>Home</li>
-                                    <li>Casas</li>
-                                    <li>Apartamentos</li>
-                                    <li>Condomínio</li>
+                                        <li>
+                                            <Link href="/">Home</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/sobre">Sobre nós</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/contato">Fale conosco</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/pesquisa">Encontre seu imóvel</Link>
+                                        </li>
                                     </ul>
                                 </nav>
                             </section>

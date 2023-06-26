@@ -13,6 +13,8 @@ background-position: center;
 
 
 
+
+
 @media (max-width:768px) {
     padding:0px ;
     margin: 70px 0px;
@@ -105,6 +107,11 @@ const ContainerForm = styled.div`
 
 
     @media (max-width: 768px) {
+
+
+        h2{
+            font-size: 17px;
+        }
         position: static;
         padding: 30px 12px;
         width: 100%;
@@ -136,6 +143,10 @@ p{
 
 @media (max-width:768px) {
     padding: 30px 12px;
+
+    h2{
+        font-size: 17px;
+    }
 }
 `
 

@@ -27,7 +27,7 @@ height: 90vh;
 
 
 @media (max-width:768px) {
-    height: auto;
+    height: 40vh;
 }
 
 `
@@ -107,7 +107,7 @@ const ContainerForm = styled.div`
     @media (max-width: 768px) {
         position: static;
         padding: 30px 12px;
-        width: 320px;
+        width: 100%;
         border-radius: 0px;
         
     }

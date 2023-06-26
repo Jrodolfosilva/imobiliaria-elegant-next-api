@@ -20,7 +20,7 @@ const ContainerPreloader = styled.div`
 
 `
 
-export default function preloader (){
+export default function Preloader (){
 
     return <ContainerPreloader></ContainerPreloader>
 }

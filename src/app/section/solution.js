@@ -129,7 +129,7 @@ export default function Solution (){
     return(
         <ContainerSectionSoluction>
             <ContainerContent>
-                <h2>Veja como a Realton pode ajudar</h2>
+                <h2>Veja como a Elegance pode ajudar</h2>
                 <p>Aliquam lacinia diam quis lacus euismod</p>
             </ContainerContent>
             <ContainerList>

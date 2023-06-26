@@ -7,11 +7,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 180px 230px;
+padding: 140px 230px;
 background-image: url("/cta-bg-1.jpg");
 background-repeat: no-repeat;
 background-position: center;
-
 
 text-align: center;
 color: #fff;

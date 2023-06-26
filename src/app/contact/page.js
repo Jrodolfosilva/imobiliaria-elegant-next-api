@@ -26,10 +26,13 @@ background-position: center;
 const Containermap = styled.div`
 
 height: 90vh; 
+margin-top: 100px;
 
 
 @media (max-width:768px) {
     height: auto;
+   
+  
 }
 
 `
@@ -46,6 +49,7 @@ const ContainerForm = styled.div`
     position: absolute;
     top: 15%;
     right: 55%;
+
 
     input[type="submit"]{
         background-color: #EB6753;
@@ -107,15 +111,16 @@ const ContainerForm = styled.div`
 
 
     @media (max-width: 768px) {
+        
 
-
-        h2{
-            font-size: 17px;
-        }
         position: static;
         padding: 30px 12px;
         width: 100%;
         border-radius: 0px;
+        
+        h2{
+            font-size: 17px;
+        }
         
     }
 

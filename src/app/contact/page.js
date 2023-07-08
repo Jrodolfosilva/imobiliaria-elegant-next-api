@@ -1,4 +1,5 @@
 "use client"
+import {useState} from "react"
 
 import styled from "styled-components"
 
@@ -159,10 +160,27 @@ p{
 
 export default function Contato (){
 
-const handleValue = ()=>{
 
-    /*controle de submissão*/
+let init ={
+    name:"",
+    lastname:"",
+    email:"",
+    mensage:""
 }
+
+const [value,setValue] = useState(init);
+
+
+const handleChange = (event) => {
+    const { name, value } = event.target;
+    setValue((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+
+
 
     return(
         <ContainerContato>
@@ -181,25 +199,31 @@ const handleValue = ()=>{
                         <h2>Nós Adoraríamos Ouvir De Você</h2>
                         <form onSubmit={(e)=>{
                             
-                            e.preventDefault()
+                            e.preventDefault();
+                            const numeroTelefone = '81998857479';
+                            const mensagem = `Nome: ${value.nome}%0aSobrenome: ${value.sobrenome}%0aEmail: ${value.email}%0aMensagem: ${value.mensagem}`;
+                            const url = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
+
+    // Redirecionar para a URL do WhatsApp
+    window.location.href = url;
                             
                             
                             }}>
                             <label>
                                 <h3>Primeiro nome</h3>
-                                <input type="text" placeholder="Seu nome"/>
+                                <input type="text" name="name" value={value.name} onChange={handleChange} placeholder="Seu nome"/>
                             </label>
                             <label>
                                 <h3>Sobrenome</h3>
-                                <input type="text" placeholder="Seu nome"/>
+                                <input type="text" placeholder="Seu nome" name="lastname" value={value.lastname} onChange={handleChange}/>
                             </label>
                             <label>
                                 <h3>Email</h3>
-                                <input type="email" placeholder="Informe seu email"/>
+                                <input type="email" placeholder="Informe seu email" name="email" value={value.email} onChange={handleChange}/>
                             </label>
                             <label>
                                 <h3>Mensagem</h3>
-                            <textarea id="mensagem" name="mensagem" rows="10" cols="33" placeholder="Escreva aqui sua mensagem"></textarea>
+                            <textarea id="mensagem" name="mensage" rows="10" cols="33"  placeholder="Escreva aqui sua mensagem" value={value.mensage} onChange={handleChange}></textarea>
                             </label>
                             <input type="submit" value="Enviar mensagem"/>
                         </form>

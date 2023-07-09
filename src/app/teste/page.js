@@ -1,6 +1,4 @@
 
-
-
 "use client"
 async function MeuComponente (){
 
@@ -40,7 +38,7 @@ let paginaTotal ;
           <p>Área Total: {imovel.AreaTotal}</p>
           <img src={imovel.FotoDestaque}/>
           <p>Área Privativa: {imovel.AreaPrivativa}</p>
-          {/* Outras informações do imóvel */}
+           Outras informações do imóvel 
           <hr />
         </div>
       ))}
@@ -49,5 +47,4 @@ let paginaTotal ;
 };
 
 export default MeuComponente;
-
 

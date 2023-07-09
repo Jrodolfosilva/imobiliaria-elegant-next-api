@@ -200,12 +200,11 @@ const handleChange = (event) => {
                         <form onSubmit={(e)=>{
                             
                             e.preventDefault();
-                            const numeroTelefone = '81998857479';
-                            const mensagem = `Nome: ${value.nome}%0aSobrenome: ${value.sobrenome}%0aEmail: ${value.email}%0aMensagem: ${value.mensagem}`;
+                            const numeroTelefone = '5581998857479';
+                            const mensagem = `Nome: ${value.name}/nSobrenome: ${value.lastname}/nEmail: ${value.email}/nMensagem: ${value.mensage}`;
                             const url = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
 
-    // Redirecionar para a URL do WhatsApp
-    window.location.href = url;
+                             console.log(url)
                             
                             
                             }}>

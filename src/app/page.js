@@ -8,7 +8,11 @@ import Agents from "./section/agents";
 import CtaHome from "./components/call-to-action-home";
 
 
-export default function Home() {
+
+export default  function Home() {
+
+ 
+
   return (
     <main>
     <Slider/>

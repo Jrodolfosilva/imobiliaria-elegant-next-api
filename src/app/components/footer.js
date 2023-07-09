@@ -42,13 +42,18 @@ const ContainerFooter = styled.footer`
             a{
                 text-decoration: none;
             }
+
         }
     }
 
+    
       div:nth-child(1){
         img{
             margin-bottom: 30px;
         }
+      
+            
+        
         
         
       } 
@@ -74,7 +79,16 @@ const ContainerFooter = styled.footer`
 }
 
 `
+const ContainerFooterSocial = styled.li`
 
+ul{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+`
 
 export default function Footer (){
 
@@ -98,20 +112,29 @@ export default function Footer (){
                             <h4> vendas@eleganceimoveis.net</h4>
                         </label>
                     </li>
-                    <li>
+                    <ContainerFooterSocial>
                         <label>
                             <p>Nos acomponhe</p>
-                            <a href="">
-                                <img src="" alt="facebook"/>
-                            </a>
-                            <a href="">
-                                <img src="" alt="instagram"/>
-                            </a>
-                            <a href="">
-                                <img src="" alt="youtube"/>
-                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                     <img src="/facebook.png" alt="facebook"/>
+                                     </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                     <img src="/instagram.png" alt="facebook"/>
+                                  </a>
+                                </li>
+                                <li>
+                                     <a href="">
+                                    <img src="/youtube.png" alt="facebook"/>
+                                    </a> 
+                                </li>
+
+                            </ul>
                         </label>
-                    </li>
+                    </ContainerFooterSocial>
                 </ul>
             </div>
             <div>

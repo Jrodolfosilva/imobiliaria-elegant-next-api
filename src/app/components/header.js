@@ -175,7 +175,7 @@ export default function Header(){
 
     const [open,setOpen] = useState(false)
 
-
+   
     return(
         <ContainerHeader>
             <Link href="/">
@@ -189,11 +189,11 @@ export default function Header(){
                     </li>
                     
                     <li>
-                    <Link href="/about">Quem somos</Link>
+                    <Link href="/sobre">Quem somos</Link>
                     </li>
                     
                     <li >
-                    <Link href="/search">Imóveis</Link>
+                    <Link href="/imovel">Imóveis</Link>
                     </li>
                     
                     <li>
@@ -201,7 +201,7 @@ export default function Header(){
                     </li>
                     
                     <li>
-                    <Link href="/contact">Contato</Link>
+                    <Link href="/contato">Contato</Link>
                     </li>
                 </MenuList>
             </nav>

@@ -221,9 +221,9 @@ export default function about (){
                 </div>
 
             </ContainerContent>
-            <ContainerImageAbout>
+            {/*<ContainerImageAbout>
                 <img src="/about-page-banner.jpg" alt=""/>
-            </ContainerImageAbout>
+    </ContainerImageAbout>*/}
             <ContainerAgents>
                 <div>
                     <h2>Nossos Time de Corretores</h2>

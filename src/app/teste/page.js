@@ -36,7 +36,7 @@ let paginaTotal ;
           <p>Suítes: {imovel.Suites}</p>
           <p>Vagas: {imovel.Vagas}</p>
           <p>Área Total: {imovel.AreaTotal}</p>
-          <img src={imovel.FotoDestaque}/>
+          <img src={imovel.FotoDestaque} alt="imagem-do-imovel"/>
           <p>Área Privativa: {imovel.AreaPrivativa}</p>
            Outras informações do imóvel 
           <hr />

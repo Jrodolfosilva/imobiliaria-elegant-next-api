@@ -14,7 +14,7 @@ h1{
 `
 
 
-export default function imovel ({params}){
+export default function Imovel ({params}){
 
 
     const codigo = params.cod
@@ -42,6 +42,8 @@ export default function imovel ({params}){
           console.log(error);
         }
       }
+
+      console.log(imoveis)
   
       fetchData();
     }, []);

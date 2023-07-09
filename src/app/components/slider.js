@@ -53,7 +53,7 @@ display: flex;
     <ContainerSlide>
       {
         imoveis&&imoveis.map((i)=>(
-            <img key={i.Codigo} src={i.FotoDestaque}/>
+            <img key={i.Codigo} src={i.FotoDestaque} alt="imagem-de-imovel-em-destaque"/>
         ))
       }
     </ContainerSlide>

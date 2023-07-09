@@ -1,7 +1,9 @@
-
+"use client"
 import styled from "styled-components"
 import { FormattedNumber,IntlProvider } from 'react-intl';
 import Link from "next/link";
+
+
 const ContainerCard = styled.a`
 
 display: block;
@@ -135,13 +137,12 @@ export default function CardProduct ({dados}){
 
     return(
             
-            <ContainerCard href={`/imovel/${dados.Codigo}`}>
+            <ContainerCard href={`imovel/${dados.Codigo}`}>
                 <ContainerImage>
-                    <img src={dados.FotoDestaque} alt={""}/>
+                    <img src={dados.FotoDestaque} alt="imagem-do-imovel"/>
                 </ContainerImage>
                 <ContainerContextProduct>
 
-                    {/*<TitleProduct>Titulo do imóvel show</TitleProduct>*/}
                     <ProductLocation>
                         <img src="/gps.svg" alt="icone-gps"/>
                         <p>{dados.Bairro}</p>

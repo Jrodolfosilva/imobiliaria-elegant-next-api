@@ -1,6 +1,5 @@
 "use client"
-import CardProduct from "@/app/utils/card-product"
-import Carousel from "@/app/utils/page"
+
 import Link from "next/link"
 import styled from "styled-components"
 
@@ -122,18 +121,3 @@ async function ListGridProducts(dadosImoveis){
 
 export default ListGridProducts
 
-
-/* const chaveKey ="e09693ec32907a7f812265cb62f53486";
-    const quantidadePorPagina = 3;
-    let paginaAtual =1
-    let paginaTotal ;
-
-    const url =`https://elegan34-rest.vistahost.com.br/imoveis/listar?key=${chaveKey}&showtotal=1&pesquisa={"fields":["Codigo","Categoria","Bairro","Cidade","ValorVenda","ValorLocacao","Dormitorios","Suites","Vagas","AreaTotal","AreaPrivativa","Caracteristicas","InfraEstrutura"],"order":{"Bairro":"asc"},"paginacao":{"pagina":1,"quantidade":${quantidadePorPagina}}}`;
-
-
-   const response = await fetch(url,{
-    headers:{
-        "Accept":"application/json"
-    }
-   });
-   const responseData = await response.json().catch((error)=>console.log(error))*/

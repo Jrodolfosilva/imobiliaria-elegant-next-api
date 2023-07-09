@@ -1,144 +1,173 @@
 "use client"
 
-import styled from "styled-components";
+import CardProduct from "@/app/utils/card-product"
+import styled from "styled-components"
+
+const ContainerSearch = styled.section`
+
+background-color: #f7f7f7;
+margin-top: 90px;
+padding:90px 160px;
 
 
-const ContainerDetails = styled.section`
+h2{
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+p{
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 60%;
+}
+
+
+@media (max-width:768px) {
+    
+    padding: 60px 12px;
+    
+
+    h2{
+        font-size: 17px;
+    }
+    p{
+        max-width: none;
+    }
+
+}
+
+
+`
+const ContainerFilter = styled.div`
+
+display: flex;
+gap: 30px;
+justify-content: space-between;
+
+margin-top: 90px;
+
+div:first-child{
+    display: flex;
+gap: 30px;
+}
+select{
+
+    background-color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight:300;
+    text-align: center;
+    cursor: pointer;
+
+
+    option{
+        text-align:left;
+        
+    }
+}
+
+
+@media (max-width:768px) {
+    
+    flex-direction: column;
+    margin-top: 20px;
+
+    div:first-child{
+    
+    flex-direction: column;
+    gap: 10px;
+}
+
+}
+
+
+`
+const ListProduct = styled.div`
 
 
 display: flex;
-flex-direction: column;
-height: 600px;
-padding: 90px 130px;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 30px;
+gap: 30px;
 
 
-`
-const ContainerGallery = styled.div`
-
-
-
-
-`
-const ContainerContent = styled.div`
-    
-    display: flex;
-    width: 100%;
-    gap: 50px;
-
-`
-const ContainerContact =  styled.div`
-    width: 40%;
-    box-shadow: 0px 10px 40px rgba(24, 26, 32, 0.05);
-
-    h2{
-        font-size: 20px;
-        font-family: inherit;
-
-    }
-
-`
-
-const ContainerOverview = styled.div`
-
-      width: 70%;
-
-
+ 
 `
 
 
-const Overview = styled.div`
-
-    box-shadow: 0px 10px 40px rgba(24, 26, 32, 0.05);   
-
-`
-
-export default function Details (imovel){
+export default function Busca (params){
 
 
     return(
-        <ContainerDetails>
-
-            <ContainerGallery>
-
-            </ContainerGallery>
-            <ContainerContent>
-                <ContainerOverview>
-                    <Overview>
-                        <ul>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="" />
-                                <div>
-                                    <h4>Quartos</h4>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </Overview>
-                </ContainerOverview>
-                <ContainerContact>
-                        <h2>Agende uma visita</h2>
-                        <form>
-                            <label>
-                                <input type="text" placeholder="Nome"/>
-                            </label>
-                            <label>
-                                <input type="text" placeholder="Telefone"/>
-                            </label>
-                            <label>
-                                <input type="email" placeholder="Email"/>
-                            </label>
-                            <label>
-                                <textarea placeholder="Escreva sua mensagem aqui..." rows="8">
-
-                                </textarea>
-                            </label>
-                        </form>
-                </ContainerContact>
-            </ContainerContent>
-
-
-        </ContainerDetails>
+        <ContainerSearch>
+            <h2>Encontre o imóvel perfeito para você</h2>
+            <p>Estamos comprometidos em 
+                tornar esse o processo mais fácil e eficiente para você.
+                 Explore nossa lista de imóveis atualizada regularmente.</p>
+            <ContainerFilter>
+                    <div>
+                    <select name="tipo">
+                        <option selected disabled value="">Tipo do Imóvel</option>
+                        <option value="valor2" >Apartamento</option>
+                        <option value="valor3">Casa</option>
+                        <option value="valor3">Condomínio</option>
+                    </select>
+                    <select name="dormitorio">
+                        <option selected disabled value="">Dormitório</option>
+1                        <option value="valor3">2</option>
+                        <option value="valor3">3</option>
+                        <option value="valor3">4</option>
+                    </select>
+                    <select name="Banheiros" value="vazio">
+                        <option disabled value="vazio">Banheiros</option>
+                        <option value="valor2" >1</option>
+1                        <option value="valor3">2</option>
+                        <option value="valor3">3</option>
+                        <option value="valor3">4</option>
+                    </select>
+                    <select name="Cidade" value="vazio">
+                        <option disabled value="vazio">Cidade</option>
+                        <option value="valor2" >Recife</option>
+1                        <option value="valor3">João Pessoa</option>
+                        <option value="valor3">natal</option>
+                        <option value="valor3">Sergipe</option>
+                    </select>
+                    </div>
+                    <div>
+                        <select name="sort" value="vazio">
+                            <option disabled value="vazio">Filtrar por:</option>
+                            <option>Mais Novos</option>
+                            <option>Mais Antigos</option>
+                        </select>
+                    </div>
+                
+                   
+                    
+                  
+                
+            </ContainerFilter>
+            <ListProduct>
+                    <CardProduct/>
+                    
+                    <CardProduct/>
+                    
+                    <CardProduct/>
+                    
+                    </ListProduct>
+                    <ListProduct>
+                    <CardProduct/>
+                    
+                    <CardProduct/>
+                    
+                    <CardProduct/>
+                    
+                    </ListProduct>
+        </ContainerSearch>
     )
 }

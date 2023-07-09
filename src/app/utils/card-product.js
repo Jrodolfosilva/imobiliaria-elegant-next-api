@@ -11,7 +11,7 @@ min-width: 320px;
 border-radius: 12px;
 box-shadow:0px 1px 4px rgba(24, 26, 32, 0.07);
 word-wrap: break-word;
-margin: 0 20px;
+margin: 20 0px;
 
 
 
@@ -92,9 +92,6 @@ const ProductFeature =  styled.div`
         display: flex;
         justify-content: space-between;
         list-style: none;
-        gap: 6px;
-
-        font-size: 13px;
         text-align: center;
 
 
@@ -103,6 +100,10 @@ const ProductFeature =  styled.div`
             flex-direction: column;
             align-items: center;
 
+            p{
+                font-size: 14px;
+                min-width: 100%;
+            }
 
             img{
                 background-color: #f7f7f7;

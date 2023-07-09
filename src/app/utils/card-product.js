@@ -1,7 +1,8 @@
 
 import styled from "styled-components"
-
-const ContainerCard = styled.div`
+import { FormattedNumber,IntlProvider } from 'react-intl';
+import Link from "next/link";
+const ContainerCard = styled.a`
 
 display: block;
 background-color: #fff;
@@ -26,11 +27,13 @@ padding: 10px 20px 20px 20px;
 const ContainerImage = styled.div`
 overflow: hidden;
 max-height: 200px;
+
 border-radius: 20px 20px 0px 0px;
 
     img{
     width: 376px;
     max-height: 200px;
+    min-height: 200px;
     border-radius: 012px 12px 0px 0px;
     transition: 0.5s;
 
@@ -91,6 +94,7 @@ const ProductFeature =  styled.div`
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         list-style: none;
         text-align: center;
 
@@ -101,7 +105,7 @@ const ProductFeature =  styled.div`
             align-items: center;
 
             p{
-                font-size: 14px;
+                font-size: 12px;
                 min-width: 100%;
             }
 
@@ -115,40 +119,64 @@ const ProductFeature =  styled.div`
     }
 
 `
+const Button = styled.button`
+
+height: 40px;
+width: 120px;
+border-radius: 8px;
+border: 1px solid #000;
+background-color: transparent;
 
 
-export default function CardProduct (){
+`
+
+export default function CardProduct ({dados}){
 
 
     return(
             
-            <ContainerCard>
+            <ContainerCard href={`/imovel/${dados.Codigo}`}>
                 <ContainerImage>
-                    <img src={"https://www.imoveissjc.com/foto_/2022/5517/sao-jose-dos-campos-casas-condominio-urbanova-28-09-2022_11-34-40-3.jpg"} alt={""}/>
+                    <img src={dados.FotoDestaque} alt={""}/>
                 </ContainerImage>
                 <ContainerContextProduct>
 
-                    <TitleProduct>Titulo do imóvel show</TitleProduct>
+                    {/*<TitleProduct>Titulo do imóvel show</TitleProduct>*/}
                     <ProductLocation>
                         <img src="/gps.svg" alt="icone-gps"/>
-                        <p>Localizado em rua tal de tal</p>
+                        <p>{dados.Bairro}</p>
                     </ProductLocation>
-                    <ProductPrice>R$ 1888888</ProductPrice>
+                    <ProductPrice>
+                            <IntlProvider locale="pt-BR">
+                            <div>
+                                <FormattedNumber
+                                value={dados.ValorVenda}
+                                style="currency"
+                                currency="BRL"
+                                />
+                                </div>
+                            </IntlProvider>
+                    </ProductPrice>
                     <ProductFeature>
                         <ul>
                             <li>
                                 <img src="/bed.svg" alt="icone-suites"/>
-                                <p>5 Suíte</p>
+                                <p>{dados.Suites} Suíte</p>
                             </li>
                             <li>
                                 <img src="/car.svg" alt="icone-garagem"/>
-                                <p>2 Vagas</p>
-                            </li><li>
+                                <p>{dados.Vagas} Vagas</p>
+                            </li>
+                            <li>
                                 <img src="/room.svg" alt="icone-dormitorios"/>
-                                <p>5 Dorm</p>
-                            </li><li>
-                                <img src="/chuveiro.svg" alt="icone-chuveiros"/>
-                                <p>5 Banheiro</p>
+                                <p>{dados.Dormitorios} Dorm</p>
+                            </li>
+                            <li>
+                                <Button> 
+                                    <Link href={`/imovel/${dados.Codigo}`}>
+                                        Ver Detalhes
+                                    </Link>
+                                </Button>
                             </li>
                         </ul>
                     </ProductFeature>

@@ -2,7 +2,7 @@
 
 import CardProduct from "@/app/utils/card-product"
 import styled from "styled-components"
-
+import { useState,useEffect } from "react"
 const ContainerSearch = styled.section`
 
 background-color: #f7f7f7;
@@ -104,8 +104,52 @@ gap: 30px;
 export default function Busca (params){
 
 
+    const chaveKey = "e09693ec32907a7f812265cb62f53486";
+    const quantidadePorPagina = 50;
+    const [paginaAtual,setPaginaAtual] = useState(1)
+    const [imoveis, setImoveis] = useState([]);
+  
+    useEffect(() => {
+      async function fetchData() {
+        const url = `http://elegan34-rest.vistahost.com.br/imoveis/listar?key=${chaveKey}&showtotal=1&pesquisa={"fields":["Codigo","Categoria","Bairro","FotoDestaque","Cidade","ValorVenda","ValorLocacao","Dormitorios","Suites","Vagas","AreaTotal","AreaPrivativa","Caracteristicas","InfraEstrutura"],"order":{"Bairro":"asc"},"paginacao":{"pagina":${paginaAtual},"quantidade":${quantidadePorPagina}}}`;
+  
+        try {
+          const response = await fetch(url, {
+            headers: {
+              Accept: "application/json",
+            },
+          });
+          const responseData = await response.json();
+          const imoveisData = Object.values(responseData).filter(
+            (item) => typeof item === "object"
+          );
+          setImoveis(imoveisData);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+  
+      fetchData();
+    }, [paginaAtual]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return(
         <ContainerSearch>
+            {      console.log(imoveis)
+}
             <h2>Encontre o imóvel perfeito para você</h2>
             <p>Estamos comprometidos em 
                 tornar esse o processo mais fácil e eficiente para você.
@@ -152,22 +196,19 @@ export default function Busca (params){
                   
                 
             </ContainerFilter>
-            <ListProduct>
-                    <CardProduct/>
+                <ListProduct>
+                    {
+                        imoveis.map((i)=>(
+
+                            <CardProduct key={i.Codigo} dados={i}/>
+                        ))
+                    }
+                            
+                 </ListProduct>
+                 <button onClick={()=>{
+                    setPaginaAtual((paginaAtual)=>paginaAtual+1)
                     
-                    <CardProduct/>
-                    
-                    <CardProduct/>
-                    
-                    </ListProduct>
-                    <ListProduct>
-                    <CardProduct/>
-                    
-                    <CardProduct/>
-                    
-                    <CardProduct/>
-                    
-                    </ListProduct>
+                 }}>Carregar mais</button>
         </ContainerSearch>
     )
 }
